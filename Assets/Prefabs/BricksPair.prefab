@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 2879088794679505309}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.00630999, y: -5.729824, z: 0.039757833}
+  m_LocalPosition: {x: 0, y: -6, z: 0.039757833}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -161,7 +161,7 @@ Transform:
   m_GameObject: {fileID: 3722946194742154726}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.00630999, y: 3.2701757, z: 0.039757833}
+  m_LocalPosition: {x: 0, y: 3.5, z: 0.039757833}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -277,6 +277,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6807996262132429118}
+  - component: {fileID: 8055498122049281637}
   m_Layer: 0
   m_Name: BricksPair
   m_TagString: Untagged
@@ -297,7 +298,19 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4268160700912260371}
   - {fileID: 5801257325503028877}
+  - {fileID: 4268160700912260371}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8055498122049281637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7669405789587463246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d6740d446a322248869aa97a620f828, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
