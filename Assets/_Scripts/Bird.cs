@@ -2,8 +2,10 @@ using UnityEngine;
 
 public class Bird : MonoBehaviour
 {
+    private const int LEFT_BUTTON = 0;
+
     [SerializeField] private float _flapForce = 10f;
-    private const int leftButton = 0;
+    [SerializeField] private float _rotation = 1.5f;
     private Rigidbody2D _rb;
 
     private void Start()
@@ -13,10 +15,12 @@ public class Bird : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(leftButton))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(LEFT_BUTTON))
         {
             Flap();
         }
+
+        _rb.MoveRotation(_rb.linearVelocityY * _rotation);
     }
 
     private void Flap()
