@@ -7,6 +7,8 @@ public class Bird : MonoBehaviour
 
     [SerializeField] private float _flapForce = 10f;
     [SerializeField] private float _rotation = 1.5f;
+    [SerializeField] private float _maxHeight = 4f;
+
     private Rigidbody2D _rb;
 
     private void Start()
@@ -36,6 +38,8 @@ public class Bird : MonoBehaviour
 
     private void Flap()
     {
+        if (transform.position.y >= _maxHeight) return;
+
         _rb.linearVelocityY = 0f;
         _rb.AddForce(Vector2.up * _flapForce, ForceMode2D.Impulse);
     }
