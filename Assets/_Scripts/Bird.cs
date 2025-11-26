@@ -36,6 +36,11 @@ public class Bird : MonoBehaviour
         Time.timeScale = 0f;
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+     
+    }
+
     private void Flap()
     {
         if (transform.position.y >= _maxHeight) return;
