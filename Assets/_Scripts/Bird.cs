@@ -1,16 +1,18 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class Bird : MonoBehaviour
 {
     private const int LEFT_BUTTON = 0;
 
-    [SerializeField] private GameManager _gameManager;
+    [SerializeField] private TextMeshPro _scoreText;
     [SerializeField] private float _flapForce = 10f;
     [SerializeField] private float _rotation = 1.5f;
     [SerializeField] private float _maxHeight = 4f;
 
     private Rigidbody2D _rb;
+    private int _score;
 
     private void Start()
     {
@@ -39,7 +41,8 @@ public class Bird : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        _gameManager.BirdPassedBricks();
+        _score++;
+        _scoreText.text = _score.ToString();
     }
 
     private void Flap()
