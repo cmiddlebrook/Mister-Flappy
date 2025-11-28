@@ -11,11 +11,13 @@ public class Bird : MonoBehaviour
     [SerializeField] private float _rotation = 1.5f;
     [SerializeField] private float _maxHeight = 4f;
 
+    private Animator _animator;
     private Rigidbody2D _rb;
     private int _score;
 
     private void Start()
     {
+        _animator = GetComponent<Animator>();
         _rb = GetComponent<Rigidbody2D>();
     }
 
@@ -26,17 +28,14 @@ public class Bird : MonoBehaviour
             Flap();
         }
 
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            ReloadScene();
-        }
-
         _rb.MoveRotation(_rb.linearVelocityY * _rotation);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Time.timeScale = 0f;
+        _animator.Play("Bird_Hit");
+        Time.timeScale = 0.1f;
+        Invoke(nameof(ReloadScene), 0.2f);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
