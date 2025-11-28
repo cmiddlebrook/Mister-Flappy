@@ -50,5 +50,8 @@ TagManager:
   - name: Bird
     uniqueID: 508359821
     locked: 0
+  - name: UI
+    uniqueID: 317763891
+    locked: 0
   m_RenderingLayers:
   - Default

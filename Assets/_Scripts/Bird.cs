@@ -5,6 +5,7 @@ public class Bird : MonoBehaviour
 {
     private const int LEFT_BUTTON = 0;
 
+    [SerializeField] private GameManager _gameManager;
     [SerializeField] private float _flapForce = 10f;
     [SerializeField] private float _rotation = 1.5f;
     [SerializeField] private float _maxHeight = 4f;
@@ -38,7 +39,7 @@ public class Bird : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-     
+        _gameManager.BirdPassedBricks();
     }
 
     private void Flap()
