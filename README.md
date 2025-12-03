@@ -1,5 +1,7 @@
 # Mister Flappy - A Unity 6 Tutorial Project
-Mister Flappy is a simple implementation of a Flappy Bird type game built for a free beginner tutorial which will be available both on Udemy and YouTube. I'll post links to both of those resources here when they are live.
+Mister Flappy is a simple implementation of a Flappy Bird type game built for a beginner tutorial which you can take for free on Udemy:
+
+[https://www.udemy.com/course/flappy-bird-from-scratch-unity6/](https://www.udemy.com/course/flappy-bird-from-scratch-unity6/)
 
 You can play the game in your browser on [Itch](https://rheyan.itch.io/mister-flappy) and the tutorial videos will be posted here when they go live.
 
